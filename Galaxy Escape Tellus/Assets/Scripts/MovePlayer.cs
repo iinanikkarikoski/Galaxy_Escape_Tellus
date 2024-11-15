@@ -26,7 +26,9 @@ public class MovePlayer : MonoBehaviour
             var targetAngle = Mathf.Atan2(movementDirection.x, movementDirection.z) * Mathf.Rad2Deg;
             var angle = Mathf.SmoothDampAngle(this.transform.eulerAngles.y, targetAngle, ref _currentVelocity, smoothTime);
             this.transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
-            gameBoard.transform.position = this.transform.position;
+            //gameBoard.transform.position.x = this.transform.position.x;
+            //gameBoard.transform.position.y = this.transform.position.y;
+            gameBoard.transform.position = new Vector3(this.transform.position.x, 10, this.transform.position.z);
         }
     //}
     //if (this.tag == "player 2"){
