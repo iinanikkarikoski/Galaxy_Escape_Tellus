@@ -77,12 +77,13 @@ public class Teleportplayers : MonoBehaviour
         }
             
             }
+            /*
         if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Two, out bool buttonDown2, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
                     if (buttonDown2){
                         //Debug.Log("jotain");
                         StartAgain();
                     }
-                 }
+                 }*/
     }
 ////////
 //https://gamedevbeginner.com/how-to-make-countdown-timer-in-unity-minutes-seconds/    
