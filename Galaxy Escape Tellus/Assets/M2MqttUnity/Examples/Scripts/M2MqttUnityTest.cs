@@ -218,7 +218,7 @@ namespace M2MqttUnity.Examples
             if (msg.Contains(sensorID1)){
                 //make sound
                 audioSource.PlayOneShot(sensorUpdateSound);
-                //Debug.Log(msg);
+                Debug.Log(msg);
                 StoreMessage(msg);
                 string[] splitted_data = msg.Split(" ");
                 String co2Data = splitted_data[15];
