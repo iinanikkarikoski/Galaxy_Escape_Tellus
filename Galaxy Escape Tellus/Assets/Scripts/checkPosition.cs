@@ -13,6 +13,7 @@ public class checkPosition : MonoBehaviour
     public Vector3[] positions;
     private float timeSinceLastCapture = 0f;
     // Start is called before the first frame update
+    /*
     void Start()
     {
         tr = GetComponent<TrailRenderer>();
@@ -41,9 +42,9 @@ public class checkPosition : MonoBehaviour
         }
     }
 
+*/
 
-
-    bool IsCircle(List<Vector3> points)
+    public bool IsCircle(List<Vector3> points)
     {
         if (points.Count < 3)
             return false;
