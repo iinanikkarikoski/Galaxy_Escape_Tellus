@@ -17,10 +17,11 @@ public class ToBossBattle : MonoBehaviour
         
     }
 
-    private void onTriggerEnter(Collider other) {
-        if (other.tag == "TellusExit")
-        {
-            SceneManager.LoadScene("Bossbattle"); 
-        }
+    private void OnTriggerEnter(Collider other) {
+        //if (other.tag == "TellusExit")
+        //{
+        Debug.Log("to boss battle ---->");
+        SceneManager.LoadScene("Bossbattle"); 
+        //}
     }
 }
