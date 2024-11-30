@@ -8,6 +8,9 @@ public class checkPosition : MonoBehaviour
     public float checkInterval = 1f; // How often to check for shapes (seconds)
     private float timeSinceLastCheck = 0f;
     public float tolerance = 1f; // tolerance for circle accuracy
+    public float minRadius = 10f;
+    //public float angleTolerance = 5f;
+    public float distanceTolerance = 1f;
 
 
     public Vector3[] positions;
@@ -71,7 +74,72 @@ public class checkPosition : MonoBehaviour
             if (Mathf.Abs(Vector3.Distance(point, centroid) - averageDistance) > tolerance)
                 return false;
         }
+        // Ensure the radius is greater than the minimum allowed radius
+        if (averageDistance < minRadius)
+            return false;
 
         return true;
     }
+/*
+    public bool IsLine(List<Vector3> points)
+    {
+        if (points == null || points.Count < 3)
+        {
+            //Debug.LogWarning("Need at least three points to check linearity.");
+            return false;
+        }
+
+        // Get the initial direction
+        Vector3 initialDirection = (points[1] - points[0]).normalized;
+
+        for (int i = 1; i < points.Count - 1; i++)
+        {
+            // Calculate the direction of the current segment
+            Vector3 currentDirection = (points[i + 1] - points[i]).normalized;
+
+            // Check the angle between the initial direction and the current direction
+            float angle = Vector3.Angle(initialDirection, currentDirection);
+
+            if (angle > angleTolerance)
+            {
+                return false; // Deviation exceeds tolerance
+            }
+
+            // Update the initial direction to the current one
+            initialDirection = currentDirection;
+        }
+
+        return true; // All segments are within the angle tolerance
+    }*/
+    public bool IsLine(List<Vector3> points)
+{
+    if (points == null || points.Count < 2)
+    {
+        return false; // Need at least two points to define a line
+    }
+
+    // Vector from the first to the last point
+    Vector3 lineDirection = (points[points.Count - 1] - points[0]).normalized;
+    Vector3 startPoint = points[0];
+
+    // Check each point's distance to the line
+    for (int i = 1; i < points.Count - 1; i++) // Skip first and last points
+    {
+        Vector3 pointToStart = points[i] - startPoint;
+
+        // Project the point-to-start vector onto the line direction
+        Vector3 projection = Vector3.Dot(pointToStart, lineDirection) * lineDirection;
+
+        // Calculate the shortest distance from the point to the line
+        float distanceToLine = (pointToStart - projection).magnitude;
+
+        // If the distance exceeds the tolerance, return false
+        if (distanceToLine > distanceTolerance)
+        {
+            return false;
+        }
+    }
+
+    return true; // All points are within the tolerance distance
+}
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShowAimPointObj : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class ShowAimPointObj : MonoBehaviour
 
     private TrailRenderer tr;
     private float triggerDisplacement;
+
+    public bool enableCheckingP1 = false;
+    public TMP_Text myTextP1;
+    private bool circleDetected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,16 +34,27 @@ public class ShowAimPointObj : MonoBehaviour
                 wasPressed_P1 = true;
             } else {
                 drawingSphereP1.SetActive(false);
-                if (wasPressed_P1 == true) {
+                if (wasPressed_P1 == true && enableCheckingP1 == true) {
                     Debug.Log("Checking shape...");
                     positions = new Vector3[tr.positionCount];
                     tr.GetPositions(positions); //get trace positions
 
                     //check shape
                     tr.GetPositions(positions); //get trace positions
-                    if (checkPosition.IsCircle(new List<Vector3>(positions)))
+                    if (circleDetected == true) {
+                        // circle has been drawn, check line
+                        if(checkPosition.IsLine(new List<Vector3>(positions))) {
+                            Debug.Log("Line detected!!!!");
+                            myTextP1.text = "Line detected, Good job!!";
+                        } else {
+                        Debug.Log("not a line");
+                    }
+                    }
+                    else if (checkPosition.IsCircle(new List<Vector3>(positions)))
                     {
                         Debug.Log("Circle shape detected!!!!!!!!!!--------");
+                        myTextP1.text = "Circle detected, Good job!!, now draw a line";
+                        circleDetected = true;
                     } else {
                         Debug.Log("not a circle");
                     }

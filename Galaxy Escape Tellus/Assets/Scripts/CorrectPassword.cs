@@ -6,18 +6,20 @@ using UnityEngine.SceneManagement;
 public class CorrectPassword : MonoBehaviour
 {
     private int[] result, correctCombination;
-    public GameObject doorGalaxy;
-    public GameObject doorHorizon;
+    //public GameObject doorGalaxy;
+    //public GameObject doorHorizon;
+    public GameObject bossDoorCollider;
 
-    [SerializeField] private AudioClip winSound;
-    [SerializeField] private AudioSource audioSource;
+    //[SerializeField] private AudioClip winSound;
+    //[SerializeField] private AudioSource audioSource;
 
     private void Start()
     {
         result = new int[]{5,5,5,5};
-        correctCombination = new int[] { 2,4,7,6 };
+        correctCombination = new int[] { 1,0,3,2 };
         LockControlTest.Rotated += CheckResults;
     }
+    /*
     public void SetPassword1(string sensor1){
         char[] numbers1 = sensor1.ToCharArray();
         
@@ -53,7 +55,7 @@ public class CorrectPassword : MonoBehaviour
         correctCombination[2] = number3Final;
         Debug.Log(correctCombination);
     }
-
+*/
     private void CheckResults(string wheelName, int number)
     {   //Debug.Log(number);
         //Debug.Log("password script");
@@ -80,20 +82,21 @@ public class CorrectPassword : MonoBehaviour
         if (result[0] == correctCombination[0] && result[1] == correctCombination[1] && result[2] == correctCombination[2] && result[3] == correctCombination[3])
         {
             Debug.Log("Opened!");
-            doorGalaxy.transform.eulerAngles = new Vector3(0f, 90f, 0f);
-            doorGalaxy.transform.position += new Vector3(1, 0, -1);
+            bossDoorCollider.SetActive(false);
+            //doorGalaxy.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+            //doorGalaxy.transform.position += new Vector3(1, 0, -1);
 
-            doorHorizon.transform.eulerAngles = new Vector3(0f, 90f, 0f);
-            doorHorizon.transform.position += new Vector3(1, 0, -1);
+            //doorHorizon.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+            //doorHorizon.transform.position += new Vector3(1, 0, -1);
 
             //win sound
-            audioSource.PlayOneShot(winSound);
+            //audioSource.PlayOneShot(winSound);
 
-            if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Two, out bool buttonDown2, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
-                if (buttonDown2){
-                    StartAgain();
-                }
-            }
+            //if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Two, out bool buttonDown2, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
+            //    if (buttonDown2){
+            //        StartAgain();
+            //    }
+            //}
 
 
 

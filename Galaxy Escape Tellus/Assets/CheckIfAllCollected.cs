@@ -15,6 +15,7 @@ public class CheckIfAllCollected : MonoBehaviour
         if (player.gameObject.tag == "player 1" || player.gameObject.tag == "player 2" || player.gameObject.tag == "player 3"){
             if(collect.getCollected() == 3){
                 barrier.SetActive(false);
+                //Debug.Log("New area unlocked!");
             }//else{
              //   myText.text = "Make sure you collected enough magic cubes.";
             //}

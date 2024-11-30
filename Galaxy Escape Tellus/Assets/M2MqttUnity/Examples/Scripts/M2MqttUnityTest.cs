@@ -226,7 +226,7 @@ namespace M2MqttUnity.Examples
                 
                 Debug.Log(co2DataFinal);
                 co2Data2_text.SetText(co2DataFinal);
-                correctPassword.SetPassword1(co2DataFinal);
+                //correctPassword.SetPassword1(co2DataFinal);
             }
             if (msg.Contains(sensorID2)){
                 //make sound
@@ -239,7 +239,7 @@ namespace M2MqttUnity.Examples
                 
                 Debug.Log(co2DataFinal2);
                 co2Data1_text.SetText(co2DataFinal2);
-                correctPassword.SetPassword2(co2DataFinal2);
+                //correctPassword.SetPassword2(co2DataFinal2);
             }
             //else{
                 //Debug.Log("joku muu sensori");

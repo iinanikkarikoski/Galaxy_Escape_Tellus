@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class zoneManager : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject colliders;
     public zone zone;
     public zone2 zone2;
     public zone3 zone3;
@@ -27,7 +27,8 @@ public class zoneManager : MonoBehaviour
     {
         if(zone.player1 && zone2.player2 && zone3.player3){
             //nyt kaikki pelaajat on laatoilla
-            obj.SetActive(true);
+            colliders.SetActive(false);
+            //Debug.Log("New area unlocked!");
             
             //all lights turned on 
             spotLightYellow.enabled = true;
