@@ -13,6 +13,9 @@ public class zoneManager : MonoBehaviour
     public Light spotLightGreen;
     public Light spotLightBlue;
 
+    public AudioSource audioSource;
+    private bool audioPlayed = false;
+
     
     void Start() 
     {
@@ -34,6 +37,12 @@ public class zoneManager : MonoBehaviour
             spotLightYellow.enabled = true;
             spotLightGreen.enabled = true;
             spotLightBlue.enabled = true;
+
+            if(audioPlayed == false) {
+                audioSource.Play();
+                audioPlayed = true;
+            }
+            
 
         }
         

@@ -19,6 +19,8 @@ public class ShowAimPointObj : MonoBehaviour
     public bool enableCheckingP1 = false;
     public TMP_Text myTextP1;
     private bool circleDetected = false;
+    public AudioSource audioSource;
+    private bool audioPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,10 @@ public class ShowAimPointObj : MonoBehaviour
                         if(checkPosition.IsLine(new List<Vector3>(positions))) {
                             Debug.Log("Line detected!!!!");
                             myTextP1.text = "Line detected, Good job!!";
+                            if(audioPlayed == false) {
+                                audioSource.Play();
+                                audioPlayed = true;
+                            }
                         } else {
                         Debug.Log("not a line");
                     }

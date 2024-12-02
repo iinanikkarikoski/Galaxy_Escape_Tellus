@@ -12,6 +12,7 @@ public class CorrectPassword : MonoBehaviour
 
     //[SerializeField] private AudioClip winSound;
     //[SerializeField] private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -91,6 +92,7 @@ public class CorrectPassword : MonoBehaviour
 
             //win sound
             //audioSource.PlayOneShot(winSound);
+            audioSource.Play();
 
             //if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Two, out bool buttonDown2, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
             //    if (buttonDown2){
