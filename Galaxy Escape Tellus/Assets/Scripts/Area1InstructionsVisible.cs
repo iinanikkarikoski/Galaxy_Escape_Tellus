@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Area1InstructionsVisible : MonoBehaviour
 {
-    public GameObject collectiblesPlane1; // Reference to the instruction plane
+    public GameObject collectiblesPlane1; 
+    
     //public GameObject collectiblesPlane2;
     //public GameObject collectiblesPlane3;
+    public GameObject instructionsPlane1;
+    //public GameObject instructionsPlane2;
+    //public GameObject instructionsPlane3;
 
     void OnTriggerEnter(Collider other)
     {
@@ -15,6 +19,14 @@ public class Area1InstructionsVisible : MonoBehaviour
             if (collectiblesPlane1 != null)
             {
                 collectiblesPlane1.SetActive(true);
+            }
+            else
+            {
+                Debug.LogError("Instruction Plane is not assigned!");
+            }
+            if (instructionsPlane1 != null)
+            {
+                instructionsPlane1.SetActive(true);
             }
             else
             {
