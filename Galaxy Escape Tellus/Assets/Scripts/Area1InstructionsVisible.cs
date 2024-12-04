@@ -1,67 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class Area1InstructionsVisible : MonoBehaviour
+public class TextController : MonoBehaviour
 {
-    public GameObject collectiblesPlane1; 
-    //public GameObject collectiblesPlane2;
-    //public GameObject collectiblesPlane3;
-    public GameObject instructionsPlane1;
-    //public GameObject instructionsPlane2;
-    //public GameObject instructionsPlane3;
+    public TextMeshProUGUI DialogueText; // Reference to the UI text element
+    public string[] Sentences;          // Array of sentences to display
+    private int Index = 0;              // Index of the current sentence
+    public float DialogueSpeed;         // Speed of the text writing
 
-    private bool hasActivated1 = false; // To track if the plane has already been shown
-    //private bool hasActivated2 = false; // To track if the plane has already been shown
-    //private bool hasActivated3 = false; // To track if the plane has already been shown
+    public GameObject instructionsPlane1; // Reference to the instruction plane
+    public GameObject collectionsPlane1; // Reference to the collections plane
+    private bool hasActivated = false;    // To ensure the plane shows only once
 
-    void OnTriggerEnter(Collider other)
+    void Update()
     {
-        // Check if the object entering the trigger is the player
-        if (other.CompareTag("player 1") && !hasActivated1)
+        // Handle dialogue progression
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            hasActivated1 = true;
-            // Activate the instruction plane
-            if (collectiblesPlane1 != null)
-            {
-                collectiblesPlane1.SetActive(true);
-                // tähän jotain että kun kaikki kerätty niin pois päältä
-            }
-            else
-            {
-                Debug.LogError("Instruction Plane is not assigned!");
-            }
+            NextSentence();
+        }
+    }
+
+    void NextSentence()
+    {
+        if (Index <= Sentences.Length - 1)
+        {
+            DialogueText.text = "";
+            StartCoroutine(WriteSentence());
+        }
+        // If it's the last sentence, hide the instruction plane
+        if (Index == Sentences.Length - 1 && instructionsPlane1 != null)
+
+        // If we are past the last sentence, hide the instruction plane
+        // if (instructionsPlane1 != null)
+        {
+            instructionsPlane1.SetActive(false);
+        }
+    }
+
+    IEnumerator WriteSentence()
+    {
+        foreach (char Character in Sentences[Index].ToCharArray())
+        {
+            DialogueText.text += Character;
+            yield return new WaitForSeconds(DialogueSpeed);
+        }
+        Index++;
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && !hasActivated)
+        {
+            hasActivated = true; // Ensure the plane shows only once
+
             if (instructionsPlane1 != null)
             {
                 instructionsPlane1.SetActive(true); // Activate the instruction plane
-                //instructionsPlane1.SetActive(false); jotain tähän että milloin menee pois päältä
             }
             else
             {
                 Debug.LogError("Instruction Plane is not assigned!");
             }
         }
-        /*if (other.CompareTag("player 2"))
-        {
-            // Activate the instruction plane
-            if (collectiblesPlane2 != null)
-            {
-                collectiblesPlane2.SetActive(true);
-            }
-            else
-            {
-                Debug.LogError("Instruction Plane is not assigned!");
-            }
-        }
-        if (other.CompareTag("player 3"))
-        {
-            // Activate the instruction plane
-            if (collectiblesPlane3 != null)
-            {
-                collectiblesPlane3.SetActive(true);
-            }
-            else
-            {
-                Debug.LogError("Instruction Plane is not assigned!");
-            }
-        }*/
     }
 }
