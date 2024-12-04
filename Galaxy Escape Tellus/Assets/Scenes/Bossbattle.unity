@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.024967156, g: 0.022754043, b: 0.070475414, a: 1}
+  m_IndirectSpecularColor: {r: 0.024901927, g: 0.022690432, b: 0.07040433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9935,13 +9935,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148585472334}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.0489, y: -0.7, z: -0.63}
-  m_LocalScale: {x: 1.3447, y: 1.3447, z: 1.3447}
+  m_LocalRotation: {x: 0, y: 0.7072302, z: 0.7069834, w: 0}
+  m_LocalPosition: {x: -0.054177, y: -1.3, z: -2.5}
+  m_LocalScale: {x: 2.6655617, y: 2.6655617, z: 2.6655617}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 180, z: 0}
 --- !u!1 &919132148585472334
 GameObject:
   m_ObjectHideFlags: 0
@@ -9953,6 +9953,7 @@ GameObject:
   - component: {fileID: 543450653060791284}
   - component: {fileID: 3469287837045322833}
   - component: {fileID: 1711813856205701275}
+  - component: {fileID: 3469287837045322834}
   m_Layer: 0
   m_Name: final_boss
   m_TagString: Untagged
@@ -10013,6 +10014,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148585472334}
   m_Mesh: {fileID: -7057382639129866952, guid: f7bc534ea5660ba4bb8a3287499df652, type: 3}
+--- !u!95 &3469287837045322834
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148585472334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: ab0c5df600b585c48b33bc37c90a0f65, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4893d2c00624cd646836adf82d9eeb8e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
