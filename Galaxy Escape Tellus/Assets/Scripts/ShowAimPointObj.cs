@@ -7,7 +7,7 @@ public class ShowAimPointObj : MonoBehaviour
 {
     public GameObject drawingSphereP1; //sphere for p1
     public GameObject flashLightP2; // light for p2
-    public GameObject cubeP3; // placeholder object for p3
+    public GameObject magnifyingGlassP3; // magnifying glass for p3
 
     public checkPosition checkPosition;
     private bool wasPressed_P1 = false;
@@ -80,9 +80,9 @@ public class ShowAimPointObj : MonoBehaviour
         }
         if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) {
             if(triggerDisplacement > 0.5f){
-                cubeP3.SetActive(true);
+                magnifyingGlassP3.SetActive(true);
             } else {
-                cubeP3.SetActive(false);
+                magnifyingGlassP3.SetActive(false);
             }
         }
     }
