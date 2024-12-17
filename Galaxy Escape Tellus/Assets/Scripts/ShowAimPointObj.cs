@@ -9,7 +9,7 @@ public class ShowAimPointObj : MonoBehaviour
     public GameObject flashLightP2; // light for p2
     public GameObject magnifyingGlassP3; // magnifying glass for p3
 
-    public checkPosition checkPosition;
+    public detectShapes checkPosition;
     private bool wasPressed_P1 = false;
     public Vector3[] positions;
 

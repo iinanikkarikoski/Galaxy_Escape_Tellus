@@ -18,7 +18,7 @@ public class CorrectPassword : MonoBehaviour
     {
         result = new int[]{5,5,5,5};
         correctCombination = new int[] { 1,0,3,2 };
-        LockControlTest.Rotated += CheckResults;
+        LockControl.Rotated += CheckResults;
     }
     /*
     public void SetPassword1(string sensor1){
@@ -112,6 +112,6 @@ public class CorrectPassword : MonoBehaviour
 
     private void OnDestroy()
     {
-        LockControlTest.Rotated -= CheckResults;
+        LockControl.Rotated -= CheckResults;
     }
 }
