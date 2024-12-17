@@ -68,8 +68,8 @@ public class LockControlTest : MonoBehaviour
         bool buttonDowny = false;
         bool buttonDowna = false;
         //bool buttonDownc = false;
-        if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Y, out buttonDowny, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) 
-        {if (TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.A, out buttonDowna, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)){
+        if(TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.Y, out buttonDowny, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) 
+        {if (TiltFive.Input.TryGetButtonDown(TiltFive.Input.WandButton.A, out buttonDowna, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)){
 
         
             
