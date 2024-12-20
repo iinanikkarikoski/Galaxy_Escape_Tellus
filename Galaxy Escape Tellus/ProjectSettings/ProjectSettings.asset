@@ -815,7 +815,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: MIXCAST;MIXCAST_TILTFIVE;MIXCAST_TILTFIVE_V2;MIXCAST_URP;MIXCAST_URP_V4
+    Standalone: MIXCAST;MIXCAST_TILTFIVE;MIXCAST_TILTFIVE_V2;MIXCAST_URP;MIXCAST_URP_V4;SSL
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

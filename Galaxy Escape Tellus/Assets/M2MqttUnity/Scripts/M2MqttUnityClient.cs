@@ -287,10 +287,11 @@ namespace M2MqttUnity
                     //System.Security.Cryptography.X509Certificates.X509Certificate cert = new System.Security.Cryptography.X509Certificates.X509Certificate();
                     //cert.Import(certificate.bytes); //This takes a TextAsset (certificate) as byte
                         //Version B (CreateFromCertFile or CreateFromSignedFile)
-                    //var cert_file= System.IO.Path.Combine(Application.streamingAssetsPath, certificateName);
-                    //var cert = System.Security.Cryptography.X509Certificates.X509Certificate2.CreateFromCertFile(cert_file);
-
-                    //client = new MqttClient(brokerAddress, brokerPort, isEncrypted, cert, null, MqttSslProtocols.TLSv1_0, MyRemoteCertificateValidationCallback);
+                    var cert_file= System.IO.Path.Combine(Application.streamingAssetsPath, certificateName);
+                    var cert = System.Security.Cryptography.X509Certificates.X509Certificate2.CreateFromCertFile(cert_file);
+                    //Debug.Log("täällä");
+                    client = new MqttClient(brokerAddress, brokerPort, isEncrypted, cert, null, MqttSslProtocols.TLSv1_2);
+                    //client = new MqttClient(brokerAddress, brokerPort, isEncrypted, cert, null, MqttSslProtocols.TLSv1_0);//, MyRemoteCertificateValidationCallback
 #endif
                 }
                 catch (Exception e)
