@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class ShowAimPointObj : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class ShowAimPointObj : MonoBehaviour
     private bool circleDetected = false;
     public AudioSource audioSource;
     private bool audioPlayed = false;
+//
+    private bool flashLightOn = false;
+    public M2MqttUnity.Examples.M2MqttUnityShellyPlug MQTT;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,9 +77,20 @@ public class ShowAimPointObj : MonoBehaviour
         }
         if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Two)) {
             if(triggerDisplacement > 0.5f){
-                flashLightP2.SetActive(true);
+                if(flashLightOn == false) {
+                    flashLightP2.SetActive(true);
+                    //publish message on
+                    MQTT.PublishOn();
+                    flashLightOn = true;
+                }
             } else {
-                flashLightP2.SetActive(false);
+                if(flashLightOn == true) {
+                    flashLightP2.SetActive(false);
+                    //publish message off
+                    MQTT.PublishOff();
+                    flashLightOn = false;
+                }
+                
             }
         }
         if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) {
@@ -85,5 +100,28 @@ public class ShowAimPointObj : MonoBehaviour
                 magnifyingGlassP3.SetActive(false);
             }
         }
+/*
+        // testing without tilt5
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            if(flashLightOn == false) {
+                Debug.Log("pressed");
+                flashLightP2.SetActive(true);
+                //publish message on
+                MQTT.PublishOn();
+                flashLightOn = true;
+            }
+        } 
+        if (Input.GetKeyUp(KeyCode.L)) {
+            if(flashLightOn == true) {
+                Debug.Log("not pressed");
+                flashLightP2.SetActive(false);
+                //publish message off
+                MQTT.PublishOff();
+                flashLightOn = false;
+            }
+            
+        }
+        */
     }
 }

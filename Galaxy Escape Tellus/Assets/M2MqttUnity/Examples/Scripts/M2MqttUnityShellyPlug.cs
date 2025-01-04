@@ -298,5 +298,21 @@ namespace M2MqttUnity.Examples
                 autoConnect = true;
             }
         }
+        public void PublishOn()
+        {
+            client.Publish("shellyplusplugs-fcb4670cdbf0/rpc", System.Text.Encoding.UTF8.GetBytes("{\"id\":0,\"src\":\"shellies/myplug-083af20071ad/rpc\",\"method\":\"Switch.Set\",\"params\":{\"id\":0,\"on\":true}}"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+            Debug.Log("turn switch on message published");
+            //AddUiMessage("Test message published.");
+        }
+        public void PublishOff()
+        {
+            client.Publish("shellyplusplugs-fcb4670cdbf0/rpc", System.Text.Encoding.UTF8.GetBytes("{\"id\":0,\"src\":\"shellies/myplug-083af20071ad/rpc\",\"method\":\"Switch.Set\",\"params\":{\"id\":0,\"on\":false}}"), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
+            Debug.Log("turn switch off published");
+            //AddUiMessage("Test message published.");
+        }
+
+
     }
+
+    
 }
