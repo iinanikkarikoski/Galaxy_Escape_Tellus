@@ -14,6 +14,7 @@ TagManager:
   - grabbable
   - ruller
   - TellusExit
+  - SensorTexts
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - player_markers_in_map
   - shadow
   - secret_code
-  - 
+  - SensorTexts
   - 
   - 
   - 

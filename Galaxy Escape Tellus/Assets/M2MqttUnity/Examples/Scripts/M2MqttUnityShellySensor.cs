@@ -57,7 +57,9 @@ namespace M2MqttUnity.Examples
         [SerializeField] private AudioClip sensorUpdateSound;
         [SerializeField] private AudioSource audioSource;
 
-
+        private String rhValueString = "0";
+        private String tCValueString = "0";
+        public TMP_Text sensorText;
         private List<string> eventMessages = new List<string>();
         private bool updateUI = false;
 
@@ -212,45 +214,25 @@ namespace M2MqttUnity.Examples
             string msg = System.Text.Encoding.UTF8.GetString(message);
             Debug.Log(msg);
 
-            /*if (msg.Contains(sensorID1)){
-                //make sound
-                audioSource.PlayOneShot(sensorUpdateSound);
-                Debug.Log(msg);
-                StoreMessage(msg);
-                string[] splitted_data = msg.Split(" ");
-                String co2Data = splitted_data[15];
-                String co2DataFinal = co2Data.Substring(0, co2Data.Length -1);
-                
-                Debug.Log(co2DataFinal);
-                co2Data2_text.SetText(co2DataFinal);
-                //correctPassword.SetPassword1(co2DataFinal);
+            //humidity: {"id": 0,"rh":27.7}
+            if (msg.Contains("rh")) {
+                int startIndex = msg.IndexOf("\"rh\":") + 5; // +5 to skip over '"rh":'
+                string substring = msg.Substring(startIndex).Trim();
+                int endIndex = substring.IndexOfAny(new char[] { ',', '}' });
+                rhValueString = substring.Substring(0, endIndex).Trim();
+                //rhValue = double.Parse(rhValueString);
             }
-            if (msg.Contains(sensorID2)){
-                //make sound
-                audioSource.PlayOneShot(sensorUpdateSound);
-                //Debug.Log(msg);
-                StoreMessage(msg);
-                string[] splitted_data2 = msg.Split(" ");
-                String co2Data2 = splitted_data2[15];
-                String co2DataFinal2 = co2Data2.Substring(0, co2Data2.Length -1);
-                
-                Debug.Log(co2DataFinal2);
-                co2Data1_text.SetText(co2DataFinal2);
-                //correctPassword.SetPassword2(co2DataFinal2);
-            }*/
-            //else{
-                //Debug.Log("joku muu sensori");
-            //}
-            //Debug.Log("Received: " + msg);
-            //StoreMessage(msg);
-            //if (topic == "cwc/elsys/parsed")
-            /*{
-                if (autoTest)
-                {
-                    autoTest = false;
-                    Disconnect();
-                }
-            }*/
+            //humidity: {"id": 0,"tC":24.9, "tF":76.8}
+            if (msg.Contains("tC")) {
+                int startIndex = msg.IndexOf("\"tC\":") + 5; // +5 to skip over '"tC":'
+                string substring = msg.Substring(startIndex).Trim();
+                int endIndex = substring.IndexOfAny(new char[] { ',', '}' });
+                tCValueString = substring.Substring(0, endIndex).Trim();
+                //tCValue = double.Parse(tCValueString);
+            }
+            string newText = tCValueString + "°C \n" + rhValueString + "%";
+            UpdateAllTexts(newText);
+
         }
 
         private void StoreMessage(string eventMsg)
@@ -291,6 +273,26 @@ namespace M2MqttUnity.Examples
             if (autoTest)
             {
                 autoConnect = true;
+            }
+        }
+        private void UpdateAllTexts(String newText)
+        {
+            // Find all TextMeshPro objects with the specified tag
+            GameObject[] textObjects = GameObject.FindGameObjectsWithTag("SensorTexts");
+
+            foreach (GameObject textObject in textObjects)
+            {
+                // Get the TextMeshProUGUI component
+                TextMeshProUGUI textMeshPro = textObject.GetComponent<TextMeshProUGUI>();
+                if (textMeshPro != null)
+                {
+                    // Update the text
+                    textMeshPro.text = newText;
+                }
+                else
+                {
+                    Debug.LogWarning($"No TextMeshProUGUI component found on object {textObject.name}");
+                }
             }
         }
     }

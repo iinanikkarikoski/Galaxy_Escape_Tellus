@@ -55,6 +55,7 @@ public class ShowPencil : MonoBehaviour
                             if(audioPlayed == false) {
                                 audioSource.Play();
                                 audioPlayed = true;
+                                //lock set active?
                             }
                         } else {
                         Debug.Log("not a line");
