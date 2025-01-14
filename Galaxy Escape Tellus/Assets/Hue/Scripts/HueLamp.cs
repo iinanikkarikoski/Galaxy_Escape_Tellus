@@ -7,17 +7,20 @@ using MiniJSON;
 
 [ExecuteInEditMode]
 public class HueLamp : MonoBehaviour {
-	public string devicePath;
+	public string devicePath = "1";
 	public bool on = true;
 	public Color color = Color.white;
 
 	private bool oldOn;
 	private Color oldColor;
 	
+	void Start() {
+    Debug.Log("HueLamp script initialized.");
+	}
+
 	void Update () {
 		if (oldOn != on || oldColor != color) {
 			HueBridge bridge = GetComponentInParent<HueBridge>();
-
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://"+ bridge.hostName+  "/api/" + bridge.username + "/lights/" + devicePath + "/state");
             Debug.Log("http" + bridge.hostName + bridge.portNumber + "/api/" + bridge.username + "/lights/" + devicePath + "/state");
 			request.Method = "PUT";
@@ -76,5 +79,12 @@ public class HueLamp : MonoBehaviour {
 		}
 
 		return new Vector3(hue, saturation, brightness);
+	}
+
+	void OnTriggerEnter(Collider collider) {
+		if (collider.tag == "player 1") {
+			Debug.Log("Collision detected, changing color.");
+			color = new Color(0.8584906f, 0.2632165f, 0.7936342f);
+		}
 	}
 }
