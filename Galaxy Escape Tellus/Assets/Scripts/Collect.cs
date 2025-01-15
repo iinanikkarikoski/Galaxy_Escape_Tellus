@@ -9,11 +9,15 @@ public class Collect : MonoBehaviour
     public TMP_Text myText2;
     public TMP_Text myText3;
     public static int collected;
+
+    private GameObject barrier;
+
     //public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         //audioSource = this.GetComponent<AudioSource>();
+        barrier = GameObject.Find("area 2 collider");
         
     }
 
@@ -28,6 +32,10 @@ public class Collect : MonoBehaviour
             myText1.text = collectedString;
             myText2.text = collectedString;
             myText3.text = collectedString;
+
+            if (collected >= 3) {
+                barrier.SetActive(false);
+            }
         }
     }
     public int getCollected(){
