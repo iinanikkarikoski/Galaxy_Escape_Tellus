@@ -5,6 +5,7 @@ using UnityEngine;
 public class zoneManager : MonoBehaviour
 {
     public GameObject colliders;
+    public GameObject footsteps;
     public zone zone;
     public zone2 zone2;
     public zone3 zone3;
@@ -31,6 +32,7 @@ public class zoneManager : MonoBehaviour
         if(zone.player1 && zone2.player2 && zone3.player3){
             //nyt kaikki pelaajat on laatoilla
             colliders.SetActive(false);
+            footsteps.SetActive(true);
             //Debug.Log("New area unlocked!");
             
             //all lights turned on 

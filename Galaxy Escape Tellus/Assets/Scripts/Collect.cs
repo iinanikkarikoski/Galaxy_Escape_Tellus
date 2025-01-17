@@ -11,6 +11,7 @@ public class Collect : MonoBehaviour
     public static int collected;
 
     private GameObject barrier;
+    public GameObject footsteps;
 
     //public AudioSource audioSource;
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class Collect : MonoBehaviour
 
             if (collected >= 3) {
                 barrier.SetActive(false);
+                footsteps.SetActive(true);
             }
         }
     }
