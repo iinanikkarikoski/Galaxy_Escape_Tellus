@@ -17,6 +17,9 @@ public class zoneManager : MonoBehaviour
     public AudioSource audioSource;
     private bool audioPlayed = false;
 
+    // Light flashing script
+    public LightChanges lightChanges;
+
     
     void Start() 
     {
@@ -40,12 +43,16 @@ public class zoneManager : MonoBehaviour
             spotLightGreen.enabled = true;
             spotLightBlue.enabled = true;
 
+            if (lightChanges != null)
+            {
+                lightChanges.FinishedLight();
+            }
+
             if(audioPlayed == false) {
                 audioSource.Play();
                 audioPlayed = true;
             }
             
-
         }
         
     }

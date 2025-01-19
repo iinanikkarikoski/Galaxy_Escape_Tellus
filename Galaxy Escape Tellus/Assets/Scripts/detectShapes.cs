@@ -12,6 +12,9 @@ public class detectShapes : MonoBehaviour
     //public float angleTolerance = 5f;
     public float distanceTolerance = 1f;
 
+    // Light flashing script
+    public LightChanges lightChanges;
+
 
     public Vector3[] positions;
     private float timeSinceLastCapture = 0f;
@@ -78,6 +81,12 @@ public class detectShapes : MonoBehaviour
         if (averageDistance < minRadius)
             return false;
 
+            // Flashes light to green
+            if (lightChanges != null)
+            {
+                lightChanges.StartCoroutine(lightChanges.FlashLight());
+            }
+
         return true;
     }
 /*
@@ -138,6 +147,12 @@ public class detectShapes : MonoBehaviour
         {
             return false;
         }
+    }
+
+    // Flashes light to green
+    if (lightChanges != null)
+    {
+        lightChanges.StartCoroutine(lightChanges.FlashLight());
     }
 
     return true; // All points are within the tolerance distance

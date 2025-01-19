@@ -9,10 +9,14 @@ using MiniJSON;
 public class HueLamp : MonoBehaviour {
 	public string devicePath = "1";
 	public bool on = true;
-	public Color color = Color.white;
+	public Color color = Color.red;
 
 	private bool oldOn;
 	private Color oldColor;
+
+	public Color greenColor = Color.green; 
+    public Color redColor = Color.red; 
+    public float flashDuration = 0.7f;
 	
 	void Start() {
     Debug.Log("HueLamp script initialized.");
@@ -81,10 +85,32 @@ public class HueLamp : MonoBehaviour {
 		return new Vector3(hue, saturation, brightness);
 	}
 
-	void OnTriggerEnter(Collider collider) {
+	/*void OnTriggerEnter(Collider collider) {
 		if (collider.tag == "player 1") {
 			Debug.Log("Collision detected, changing color.");
 			color = new Color(0.8584906f, 0.2632165f, 0.7936342f);
 		}
-	}
+	}*/
+
+	public System.Collections.IEnumerator FlashLightHue()
+    {
+        // Change the light to green
+        color = greenColor;
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(flashDuration);
+
+        // Revert the light back to red
+        color = redColor;
+    }
+
+    public void FinishedLightHue()
+    {
+        color = greenColor;
+    }
+
+	public void NewArea()
+    {
+        color = redColor;
+    }
 }

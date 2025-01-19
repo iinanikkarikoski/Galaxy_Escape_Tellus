@@ -13,6 +13,10 @@ public class Collect : MonoBehaviour
     private GameObject barrier;
     public GameObject footsteps;
 
+    // Light flashing script
+    public LightChanges lightChanges;
+    //public HueLamp hueLamp;
+
     //public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -37,7 +41,23 @@ public class Collect : MonoBehaviour
             if (collected >= 3) {
                 barrier.SetActive(false);
                 footsteps.SetActive(true);
+
+                if (lightChanges != null /*&& hueLamp != null*/)
+                {
+                    lightChanges.FinishedLight();
+                    //hueLamp.FinishedLightHue();
+                }
             }
+
+            if (collected < 3) {
+                // Flashes light to green
+                if (lightChanges != null /*&& hueLamp != null*/)
+                {
+                    lightChanges.StartCoroutine(lightChanges.FlashLight());
+                    //hueLamp.StartCoroutine(hueLamp.FlashLightHue());
+                }
+            }
+            
         }
     }
     public int getCollected(){
