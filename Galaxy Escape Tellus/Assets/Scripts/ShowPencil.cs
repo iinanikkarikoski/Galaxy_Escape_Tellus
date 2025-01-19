@@ -18,7 +18,7 @@ public class ShowPencil : MonoBehaviour
     private float triggerDisplacement;
 
     public bool enableCheckingP1 = false;
-    //public TMP_Text myTextP1;
+    public TMP_Text P1_text;
     private bool circleDetected = false;
     public AudioSource audioSource;
     private bool audioPlayed = false;
@@ -54,6 +54,7 @@ public class ShowPencil : MonoBehaviour
                         // circle has been drawn, check line
                         if(checkPosition.IsLine(new List<Vector3>(positions))) {
                             Debug.Log("Line detected!!!!");
+                            P1_text.text = "Second shape correct! Great job!";
                             //myTextP1.text = "Line detected, Good job!!";
                             if(audioPlayed == false) {
                                 audioSource.Play();
@@ -61,18 +62,22 @@ public class ShowPencil : MonoBehaviour
                                 //lock set active?
                                 lock_obj.SetActive(true);
                                 footsteps.SetActive(true);
+                                enableCheckingP1 = false;
                             }
                         } else {
                         Debug.Log("not a line");
+                        P1_text.text = "Not quite right. Try again";
                     }
                     }
                     else if (checkPosition.IsCircle(new List<Vector3>(positions)))
                     {
                         Debug.Log("Circle shape detected!!");
+                        P1_text.text = "First shape correct!";
                         //myTextP1.text = "Circle detected, Good job!!, now draw a line";
                         circleDetected = true;
                     } else {
                         Debug.Log("not a circle");
+                        P1_text.text = "Not quite right. Try again";
                     }
                 }
                 wasPressed_P1 = false;
