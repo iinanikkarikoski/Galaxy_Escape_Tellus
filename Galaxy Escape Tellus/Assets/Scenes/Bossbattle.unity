@@ -361,7 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: moiiiii keltanen
+  m_text: boss battle here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 24751082}
   - component: {fileID: 24751084}
   - component: {fileID: 24751083}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: npc speaking image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1410,6 +1410,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112697852}
   m_Mesh: {fileID: 2959467708922500008, guid: fb793181a70b9f44bade32ecf2a19015, type: 3}
+--- !u!1 &115739489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 115739490}
+  - component: {fileID: 115739491}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &115739490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115739489}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.039817303, z: -0, w: 0.99920696}
+  m_LocalPosition: {x: 0.001, y: 0, z: -6.41}
+  m_LocalScale: {x: 0.66258, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1851528575}
+  m_LocalEulerAnglesHint: {x: 0, y: -4.564, z: 0}
+--- !u!65 &115739491
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115739489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &126525805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,7 +2241,7 @@ GameObject:
   - component: {fileID: 248193457}
   - component: {fileID: 248193458}
   - component: {fileID: 248193459}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: NPC speaking text P3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,7 +2295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: moiiiii keltanen
+  m_text: boss battle here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2914,7 +2967,7 @@ GameObject:
   - component: {fileID: 331106168}
   - component: {fileID: 331106167}
   - component: {fileID: 331106166}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: NPC canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4870,7 +4923,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.471698, g: 0.56819254, b: 0.6666667, a: 1}
-  m_Intensity: 1
+  m_Intensity: 5.01
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5440,7 +5493,7 @@ GameObject:
   - component: {fileID: 679755893}
   - component: {fileID: 679755892}
   - component: {fileID: 679755891}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Canvas for text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7402,7 +7455,7 @@ GameObject:
   - component: {fileID: 976409956}
   - component: {fileID: 976409958}
   - component: {fileID: 976409957}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: npc speaking image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7764,6 +7817,59 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1041398427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1041398428}
+  - component: {fileID: 1041398429}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1041398428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041398427}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.385777, z: -0, w: 0.9225921}
+  m_LocalPosition: {x: -0.413, y: -0.23800646, z: -4.59}
+  m_LocalScale: {x: 0.024346404, y: 1.0358548, z: 0.6814535}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1851528575}
+  m_LocalEulerAnglesHint: {x: 0, y: -45.384, z: 0}
+--- !u!65 &1041398429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041398427}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1054741459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7776,7 +7882,7 @@ GameObject:
   - component: {fileID: 1054741463}
   - component: {fileID: 1054741462}
   - component: {fileID: 1054741461}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: NPC canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13753,6 +13859,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1195886921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1195886922}
+  - component: {fileID: 1195886923}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1195886922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195886921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.3353358, z: -0, w: 0.94209874}
+  m_LocalPosition: {x: 0.209, y: -0.23801859, z: -3.62}
+  m_LocalScale: {x: 0.024346404, y: 1.0358548, z: 0.6814535}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1851528575}
+  m_LocalEulerAnglesHint: {x: 0, y: 39.186, z: 0}
+--- !u!65 &1195886923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195886921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1201265771
 GameObject:
   m_ObjectHideFlags: 0
@@ -14343,7 +14502,7 @@ GameObject:
   - component: {fileID: 1333229923}
   - component: {fileID: 1333229922}
   - component: {fileID: 1333229921}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Canvas for text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14643,6 +14802,7 @@ MonoBehaviour:
   spotLightGreen: {fileID: 1152651732}
   spotLightBlue: {fileID: 1201265772}
   audioSource: {fileID: 1344898057}
+  lightChanges: {fileID: 0}
 --- !u!4 &1344898059
 Transform:
   m_ObjectHideFlags: 0
@@ -15221,7 +15381,7 @@ Transform:
   m_GameObject: {fileID: 1497601557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.4, y: 0, z: 24.3}
+  m_LocalPosition: {x: -4.2, y: -6.8, z: -16.4}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15422,7 +15582,7 @@ Transform:
   m_GameObject: {fileID: 1578662093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.9, y: 0, z: 24.5}
+  m_LocalPosition: {x: -3.7, y: 0, z: -19.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15705,7 +15865,7 @@ GameObject:
   - component: {fileID: 1627419383}
   - component: {fileID: 1627419382}
   - component: {fileID: 1627419381}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: 'P2, instructions plane '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16088,7 +16248,7 @@ GameObject:
   - component: {fileID: 1673671050}
   - component: {fileID: 1673671051}
   - component: {fileID: 1673671052}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: NPC speaking text P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16142,7 +16302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: moiiiii keltanen
+  m_text: boss battle here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16492,7 +16652,7 @@ GameObject:
   - component: {fileID: 1766810397}
   - component: {fileID: 1766810396}
   - component: {fileID: 1766810395}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: 'P3, instructions plane  '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17054,7 +17214,7 @@ Transform:
   m_GameObject: {fileID: 1801975679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.17, y: 1.1799984, z: -17.83}
+  m_LocalPosition: {x: -1.17, y: 28.9, z: -17.83}
   m_LocalScale: {x: 0.25755, y: 0.25755, z: 0.25755}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17199,32 +17359,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7432978
+      value: 1.4043136
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7432978
+      value: 1.4043136
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7432978
+      value: 1.4043136
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1999985
+      value: -1.1374
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
         type: 3}
@@ -17369,8 +17529,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1814474968}
   m_SourcePrefab: {fileID: 100100000, guid: 18a7c31d4fc0d5c4693fdb33a6d16611, type: 3}
+--- !u!1 &1814474967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 18a7c31d4fc0d5c4693fdb33a6d16611,
+    type: 3}
+  m_PrefabInstance: {fileID: 1814474966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1814474968
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814474967}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1814500016
 GameObject:
   m_ObjectHideFlags: 0
@@ -17690,6 +17882,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845843091}
   m_CullTransparentMesh: 1
+--- !u!1 &1851528573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1851528575}
+  - component: {fileID: 1851528574}
+  m_Layer: 0
+  m_Name: area colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1851528574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851528573}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1851528575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851528573}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.050847113, z: -0, w: 0.99870646}
+  m_LocalPosition: {x: 3.3, y: 3.7, z: -13.5}
+  m_LocalScale: {x: 58.801704, y: 13.730455, z: 1.4119471}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 115739490}
+  - {fileID: 1041398428}
+  - {fileID: 1195886922}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -5.829, z: 0}
 --- !u!1001 &1875034881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17716,7 +17964,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5a7b442c35346df46aa9a2cc4293ef97,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.8
+      value: -49.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a7b442c35346df46aa9a2cc4293ef97,
         type: 3}
@@ -17726,7 +17974,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5a7b442c35346df46aa9a2cc4293ef97,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.3
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5a7b442c35346df46aa9a2cc4293ef97,
         type: 3}
@@ -17915,7 +18163,7 @@ Transform:
   m_GameObject: {fileID: 1893392130}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.6, y: 0, z: 24.3}
+  m_LocalPosition: {x: -4.1, y: 0, z: -18.7}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24926,7 +25174,7 @@ Transform:
   m_GameObject: {fileID: 2025946139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7699995, y: 1.2499985, z: -16.43}
+  m_LocalPosition: {x: -3.7699995, y: 28.97, z: -16.43}
   m_LocalScale: {x: 0.25755, y: 0.25755, z: 0.25755}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25795,7 +26043,7 @@ Transform:
   m_GameObject: {fileID: 2110871605}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.0299997, y: 1.2599986, z: -20.830002}
+  m_LocalPosition: {x: 3.0299997, y: 28.98, z: -20.830002}
   m_LocalScale: {x: 0.25755, y: 0.25755, z: 0.25755}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26130,3 +26378,4 @@ SceneRoots:
   - {fileID: 1344898059}
   - {fileID: 1905604664}
   - {fileID: 1241924543}
+  - {fileID: 1851528575}
