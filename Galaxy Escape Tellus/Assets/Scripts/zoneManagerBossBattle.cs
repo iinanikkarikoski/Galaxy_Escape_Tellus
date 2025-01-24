@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class zoneManager : MonoBehaviour
+public class zoneManagerBossBattle : MonoBehaviour
 {
-    public GameObject colliders;
-    public GameObject footsteps;
     public zone zone;
     public zone2 zone2;
     public zone3 zone3;
@@ -16,6 +14,11 @@ public class zoneManager : MonoBehaviour
 
     public AudioSource audioSource;
     private bool audioPlayed = false;
+
+    public GameObject gun_yellow;
+    public GameObject gun_green;
+    public GameObject gun_blue;
+
 
 
     // Light flashing script
@@ -28,6 +31,9 @@ public class zoneManager : MonoBehaviour
         spotLightGreen.enabled = false;
         spotLightBlue.enabled = false;
 
+        gun_yellow.SetActive(false);
+        gun_green.SetActive(false);
+        gun_blue.SetActive(false);
     }
 
 //tarkistaa että kaikki on laatoilla
@@ -36,10 +42,7 @@ public class zoneManager : MonoBehaviour
     {
         if(zone.player1 && zone2.player2 && zone3.player3){
             //nyt kaikki pelaajat on laatoilla
-            colliders.SetActive(false);
-            footsteps.SetActive(true);
-            //Debug.Log("New area unlocked!");
-            
+  
             //all lights turned on 
             spotLightYellow.enabled = true;
             spotLightGreen.enabled = true;
@@ -54,6 +57,10 @@ public class zoneManager : MonoBehaviour
                 audioSource.Play();
                 audioPlayed = true;
             }
+
+            gun_yellow.SetActive(true);
+            gun_green.SetActive(true);
+            gun_blue.SetActive(true);
             
         }
         

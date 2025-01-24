@@ -2,27 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBullet : MonoBehaviour
+public class FireBullet1 : MonoBehaviour
 {
     public GameObject bullet;
     public Transform spawnPoint;
     public float fireSpeed = 20;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float triggerDisplacement;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Fire();
+        }
+
+        /*if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
+            Fire();
+        }*/
     }
 
-    public void Fire(float arg) {
-
-        //How to get it to fire when pulled trigger 
+    public void Fire() {
+ 
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
