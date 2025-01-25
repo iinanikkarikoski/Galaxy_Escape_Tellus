@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02495846, g: 0.02274444, b: 0.07047759, a: 1}
+  m_IndirectSpecularColor: {r: 0.024901927, g: 0.022690432, b: 0.07040433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1297,7 +1297,7 @@ Animator:
   m_GameObject: {fileID: 919132147745689617}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 6f7fb1a3211f2b8439f562134ed1316d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 1ac6b4373cb33d34f9b59f7dadf141ed, type: 2}
+  m_Controller: {fileID: 9100000, guid: c85912021a27f1a48b1179eafef100b5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -38372,6 +38372,7 @@ GameObject:
   - component: {fileID: 35185540}
   - component: {fileID: 919132147745689618}
   - component: {fileID: 919132147745689619}
+  - component: {fileID: 919132147745689620}
   m_Layer: 0
   m_Name: bob
   m_TagString: Untagged
@@ -38412,9 +38413,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f63b556549d6448ab8814708828549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossHealth: 100
   boss: {fileID: 919132147745689617}
   bridge: {fileID: 1963372125}
   progressbar: {fileID: 702333580}
+--- !u!114 &919132147745689620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147745689617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b3a7c9179900c449b7f44980dbe1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHitScript: {fileID: 919132147745689619}
 --- !u!1 &919132147966984919
 GameObject:
   m_ObjectHideFlags: 0

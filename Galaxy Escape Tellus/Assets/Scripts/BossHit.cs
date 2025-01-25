@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BossHit : MonoBehaviour
 {
 
-    private int bossHealth = 100;
+    public int bossHealth = 100;
     public GameObject boss;
     public GameObject bridge;
 
