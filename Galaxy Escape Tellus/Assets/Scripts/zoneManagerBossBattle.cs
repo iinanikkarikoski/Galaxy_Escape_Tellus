@@ -19,6 +19,11 @@ public class zoneManagerBossBattle : MonoBehaviour
     public GameObject gun_green;
     public GameObject gun_blue;
 
+    public GameObject progressbar;
+
+    //goes to the walk anims script to activate the walk with gun
+    public bool visited;
+
 
 
     // Light flashing script
@@ -31,9 +36,13 @@ public class zoneManagerBossBattle : MonoBehaviour
         spotLightGreen.enabled = false;
         spotLightBlue.enabled = false;
 
-        gun_yellow.SetActive(false);
-        gun_green.SetActive(false);
-        gun_blue.SetActive(false);
+        visited = false;
+
+        //change to false! for testing these are true
+        gun_yellow.SetActive(true);
+        gun_green.SetActive(true);
+        gun_blue.SetActive(true);
+        progressbar.SetActive(true);
     }
 
 //tarkistaa että kaikki on laatoilla
@@ -48,6 +57,8 @@ public class zoneManagerBossBattle : MonoBehaviour
             spotLightGreen.enabled = true;
             spotLightBlue.enabled = true;
 
+            visited = true;
+
             if (lightChanges != null)
             {
                 lightChanges.FinishedLight();
@@ -61,6 +72,7 @@ public class zoneManagerBossBattle : MonoBehaviour
             gun_yellow.SetActive(true);
             gun_green.SetActive(true);
             gun_blue.SetActive(true);
+            progressbar.SetActive(true);
             
         }
         

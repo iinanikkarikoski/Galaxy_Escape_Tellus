@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBullet1 : MonoBehaviour
+public class FireBullet3 : MonoBehaviour
 {
     public GameObject bullet;
     public Transform spawnPoint;
@@ -12,12 +12,12 @@ public class FireBullet1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Fire();
         }
 
-        /*if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
+        /*if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) {
             Fire();
         }*/
     }
@@ -27,6 +27,6 @@ public class FireBullet1 : MonoBehaviour
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
         spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        Destroy(spawnedBullet, 5);
+        Destroy(spawnedBullet, 1);
     }
 }

@@ -15,6 +15,7 @@ TagManager:
   - ruller
   - TellusExit
   - SensorTexts
+  - bullet
   layers:
   - Default
   - TransparentFX
