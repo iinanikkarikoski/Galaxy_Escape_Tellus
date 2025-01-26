@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.024901927, g: 0.022690432, b: 0.07040433, a: 1}
+  m_IndirectSpecularColor: {r: 0.02495846, g: 0.02274444, b: 0.07047759, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7239,12 +7239,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57ef3243d654b924480b59318a646df6, type: 3}
---- !u!1 &573902252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 453043079705201993, guid: 57ef3243d654b924480b59318a646df6,
-    type: 3}
-  m_PrefabInstance: {fileID: 573902251}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &577441954
 GameObject:
   m_ObjectHideFlags: 0
@@ -9202,9 +9196,8 @@ MonoBehaviour:
       copyPlayerOneNearClipPlane: 1
       copyPlayerOneFarClipPlane: 1
       headPoseCamera: {fileID: 126525809}
-      objectTemplate: {fileID: 453043079705201993, guid: 57ef3243d654b924480b59318a646df6,
-        type: 3}
-      playerTemplate: {fileID: 573902252}
+      objectTemplate: {fileID: 0}
+      playerTemplate: {fileID: 0}
       cloneCameraTemplateChildren: 0
       cullingMask:
         serializedVersion: 2
@@ -9248,7 +9241,7 @@ MonoBehaviour:
       tiltFiveXR: 1
       copyPlayerOneCameraTemplate: 1
       copyPlayerOneObjectTemplate: 1
-      copyPlayerOnePlayerTemplate: 1
+      copyPlayerOnePlayerTemplate: 0
       copyCloneCameraTemplateChildren: 1
       copyPlayerOneCullingMask: 0
       copyPlayerOneFOVToggle: 1
@@ -9256,9 +9249,8 @@ MonoBehaviour:
       copyPlayerOneNearClipPlane: 1
       copyPlayerOneFarClipPlane: 1
       headPoseCamera: {fileID: 126525809}
-      objectTemplate: {fileID: 453043079705201993, guid: 57ef3243d654b924480b59318a646df6,
-        type: 3}
-      playerTemplate: {fileID: 573902252}
+      objectTemplate: {fileID: 0}
+      playerTemplate: {fileID: 0}
       cloneCameraTemplateChildren: 0
       cullingMask:
         serializedVersion: 2
@@ -9302,7 +9294,7 @@ MonoBehaviour:
       tiltFiveXR: 1
       copyPlayerOneCameraTemplate: 1
       copyPlayerOneObjectTemplate: 1
-      copyPlayerOnePlayerTemplate: 1
+      copyPlayerOnePlayerTemplate: 0
       copyCloneCameraTemplateChildren: 1
       copyPlayerOneCullingMask: 0
       copyPlayerOneFOVToggle: 1
@@ -9310,9 +9302,8 @@ MonoBehaviour:
       copyPlayerOneNearClipPlane: 1
       copyPlayerOneFarClipPlane: 1
       headPoseCamera: {fileID: 126525809}
-      objectTemplate: {fileID: 453043079705201993, guid: 57ef3243d654b924480b59318a646df6,
-        type: 3}
-      playerTemplate: {fileID: 573902252}
+      objectTemplate: {fileID: 0}
+      playerTemplate: {fileID: 0}
       cloneCameraTemplateChildren: 0
       cullingMask:
         serializedVersion: 2
@@ -9364,9 +9355,8 @@ MonoBehaviour:
       copyPlayerOneNearClipPlane: 1
       copyPlayerOneFarClipPlane: 1
       headPoseCamera: {fileID: 126525809}
-      objectTemplate: {fileID: 453043079705201993, guid: 57ef3243d654b924480b59318a646df6,
-        type: 3}
-      playerTemplate: {fileID: 573902252}
+      objectTemplate: {fileID: 0}
+      playerTemplate: {fileID: 0}
       cloneCameraTemplateChildren: 0
       cullingMask:
         serializedVersion: 2
@@ -9428,7 +9418,7 @@ MonoBehaviour:
     level: 0
     TAG: TFI
   editorSettings:
-    selectedPlayer: 1
+    selectedPlayer: 3
     selectedPlayerSettingsPanel: 0
 --- !u!1 &831186222
 GameObject:
@@ -28278,10 +28268,10 @@ GameObject:
   - component: {fileID: 1801975686}
   - component: {fileID: 1801975685}
   - component: {fileID: 1801975684}
-  - component: {fileID: 1801975683}
   - component: {fileID: 1801975682}
   - component: {fileID: 1801975681}
   - component: {fileID: 1801975680}
+  - component: {fileID: 1801975687}
   m_Layer: 0
   m_Name: Player 2 green
   m_TagString: player 2
@@ -28302,7 +28292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1801975681}
-  zmBossBattle: {fileID: 1344898060}
 --- !u!95 &1801975681
 Animator:
   serializedVersion: 5
@@ -28345,20 +28334,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.46, y: 12.38, z: 3.3}
   m_Center: {x: 0.17, y: 6.33, z: -0.25}
---- !u!114 &1801975683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801975679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf618140e5afb4481d8ab4edc78d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.15
-  gameBoard: {fileID: 1578662093}
 --- !u!114 &1801975684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28366,7 +28341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801975679}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -28387,7 +28362,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1801975683}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MovePlayer, Assembly-CSharp
         m_MethodName: movePlayer
         m_Mode: 1
@@ -28507,6 +28482,20 @@ Transform:
   - {fileID: 1622672868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1801975687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801975679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47645e948922f1441a4a4f867f7c67ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.15
+  gameBoard: {fileID: 0}
 --- !u!1 &1802928847
 GameObject:
   m_ObjectHideFlags: 0
@@ -35374,7 +35363,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2025946141}
-  zmBossBattle: {fileID: 1344898060}
 --- !u!95 &2025946141
 Animator:
   serializedVersion: 5
@@ -35438,7 +35426,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025946139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -36520,7 +36508,7 @@ GameObject:
   - component: {fileID: 2110871609}
   - component: {fileID: 2110871608}
   - component: {fileID: 2110871607}
-  - component: {fileID: 2110871606}
+  - component: {fileID: 2110871613}
   m_Layer: 0
   m_Name: ' Player 3 blue'
   m_TagString: player 3
@@ -36528,20 +36516,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2110871606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110871605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fbf618140e5afb4481d8ab4edc78d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.15
-  gameBoard: {fileID: 1893392130}
 --- !u!114 &2110871607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36555,7 +36529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2110871608}
-  zmBossBattle: {fileID: 1344898060}
 --- !u!95 &2110871608
 Animator:
   serializedVersion: 5
@@ -36626,7 +36599,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2110871606}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MovePlayer, Assembly-CSharp
         m_MethodName: movePlayer
         m_Mode: 1
@@ -36746,6 +36719,20 @@ Transform:
   - {fileID: 2110227801}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110871613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110871605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a469e690d1dbb94aa138039ec1c064c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.15
+  gameBoard: {fileID: 0}
 --- !u!1 &2118251646
 GameObject:
   m_ObjectHideFlags: 0

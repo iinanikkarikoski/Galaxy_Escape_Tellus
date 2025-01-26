@@ -9,17 +9,25 @@ public class FireBullet3 : MonoBehaviour
     public float fireSpeed = 20;
 
     private float triggerDisplacement;
+    private bool wasPressed = false;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        /*if (Input.GetKeyDown(KeyCode.S))
         {
             Fire();
-        }
-
-        /*if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) {
-            Fire();
         }*/
+
+        if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.Three)) {
+            if(triggerDisplacement > 0.5f){
+                if(wasPressed == false){
+                    Fire();
+                }
+                wasPressed = true;
+            } else {
+                wasPressed = false;
+            }
+        }
     }
 
     public void Fire() {
