@@ -80,14 +80,18 @@ public class ShowFlashLight : MonoBehaviour
                 if(flashLightOn == false) {
                     flashLightP2.SetActive(true);
                     //publish message on
-                    MQTT.PublishOn();
+                    if (MQTT != null) {
+                        MQTT.PublishOn();
+                    }
                     flashLightOn = true;
                 }
             } else {
                 if(flashLightOn == true) {
                     flashLightP2.SetActive(false);
                     //publish message off
-                    MQTT.PublishOff();
+                    if (MQTT != null) {
+                        MQTT.PublishOff();
+                    }
                     flashLightOn = false;
                 }
                 

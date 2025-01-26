@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LimitCamera : MonoBehaviour
 {
-    public GameObject player;
+    public Transform minimap_cam;
 
     private void LateUpdate() {
-        transform.position = new Vector3(player.transform.position.x, 40, player.transform.position.z);
+        minimap_cam.transform.rotation = Quaternion.Euler (90.0f, 0.0f, 0.0f);
     }
 }
