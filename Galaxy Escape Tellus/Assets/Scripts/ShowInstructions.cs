@@ -25,6 +25,8 @@ public class ShowInstructions : MonoBehaviour
     //public GameObject collectionsPlane1; // Reference to the collections plane
     private bool hasActivated = false;    // To ensure the plane shows only once
     private bool isLastSentence = false;
+    public AudioClip[] SoundClips; // Array to store random sound clips
+    private AudioSource audioSource;
 
 /*
     void NextSentence()
@@ -45,11 +47,31 @@ public class ShowInstructions : MonoBehaviour
         }
     }
 */
+
+    void Start()
+    {
+        // Get the AudioSource component attached to the same GameObject
+        audioSource = GetComponent<AudioSource>();
+
+        // If there's no AudioSource, add one dynamically
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
     IEnumerator WriteSentenceP1()
     {
         foreach (char Character in SentencesP1[IndexP1].ToCharArray())
         {
             DialogueTextP1.text += Character;
+
+            // Play sound only if the character is not a space
+            if (Character != ' ')
+            {
+                PlayRandomSound();
+            }
+
             yield return new WaitForSeconds(DialogueSpeed);
         }
         IndexP1++;
@@ -71,6 +93,18 @@ public class ShowInstructions : MonoBehaviour
             yield return new WaitForSeconds(DialogueSpeed);
         }
         IndexP3++;
+    }
+
+    void PlayRandomSound()
+    {
+        if (SoundClips.Length > 0)
+        {
+            // Select a random sound from the array
+            AudioClip randomClip = SoundClips[Random.Range(0, SoundClips.Length)];
+
+            // Play the selected sound
+            audioSource.PlayOneShot(randomClip);
+        }
     }
 
     async void OnTriggerEnter(Collider other)
