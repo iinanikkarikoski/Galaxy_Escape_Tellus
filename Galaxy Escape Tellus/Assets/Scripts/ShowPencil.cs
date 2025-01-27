@@ -24,7 +24,8 @@ public class ShowPencil : MonoBehaviour
     private bool audioPlayed = false;
 
     public GameObject lock_obj;
-    public GameObject footsteps;
+    public GameObject footsteps_from_2to3;
+    public GameObject footsteps_from_3tolock;
 //
     //private bool flashLightOn = false;
     //public M2MqttUnity.Examples.M2MqttUnityShellyPlug MQTT;
@@ -61,7 +62,8 @@ public class ShowPencil : MonoBehaviour
                                 audioPlayed = true;
                                 //lock set active?
                                 lock_obj.SetActive(true);
-                                footsteps.SetActive(true);
+                                footsteps_from_3tolock.SetActive(true);
+                                footsteps_from_2to3.SetActive(false);
                                 enableCheckingP1 = false;
                             }
                         } else {

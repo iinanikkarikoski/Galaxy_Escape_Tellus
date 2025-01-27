@@ -38,7 +38,7 @@ public class Collect : MonoBehaviour
             myText2.text = collectedString;
             myText3.text = collectedString;
 
-            if (collected >= 3) {
+            if (collected >= 10) {
                 barrier.SetActive(false);
                 footsteps.SetActive(true);
 
