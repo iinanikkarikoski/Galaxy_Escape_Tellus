@@ -27,6 +27,7 @@ public class ShowInstructions : MonoBehaviour
     private bool isLastSentence = false;
     public AudioClip[] SoundClips; // Array to store random sound clips
     private AudioSource audioSource;
+    public bool scriptOn = false;
 
 /*
     void NextSentence()
@@ -112,7 +113,7 @@ public class ShowInstructions : MonoBehaviour
         if ((other.CompareTag("player 1") || other.CompareTag("player 2") || other.CompareTag("player 3") ) && !hasActivated)
         {
             hasActivated = true; // Ensure the plane shows only once
-
+            scriptOn = true;
             if (instructionsPlane1 != null)
             {
                 instructionsPlane1.SetActive(true); // Activate the instruction plane

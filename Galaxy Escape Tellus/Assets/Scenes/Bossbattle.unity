@@ -361,7 +361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: boss battle here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: boss battle here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6135,6 +6135,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 09eb706f028c95b44ba7edd08356777c, type: 3}
   - {fileID: 8300000, guid: 78f6430f217a0e34aab125e8305caae4, type: 3}
   - {fileID: 8300000, guid: c8a161840b973e24c8936434020451d1, type: 3}
+  scriptOn: 0
 --- !u!65 &473587029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6165,7 +6166,7 @@ Transform:
   m_GameObject: {fileID: 473587027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.62, y: 1.53, z: -20.5}
+  m_LocalPosition: {x: 1.62, y: 1.53, z: -18.81}
   m_LocalScale: {x: 1.1989, y: 1.1989, z: 1.1989}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9051,6 +9052,8 @@ MonoBehaviour:
   positions: []
   enableCheckingP1: 0
   P1_text: {fileID: 0}
+  P2_text: {fileID: 0}
+  P3_text: {fileID: 0}
   audioSource: {fileID: 0}
   lock_obj: {fileID: 0}
   footsteps_from_2to3: {fileID: 0}
@@ -9331,8 +9334,8 @@ Transform:
   m_GameObject: {fileID: 831186222}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 4.889359, y: -26.287546, z: -87.2089}
-  m_LocalScale: {x: 0.40676862, y: 0.40676862, z: 0.40676862}
+  m_LocalPosition: {x: 3.3969, y: -22.65, z: -57.023}
+  m_LocalScale: {x: 0.2844347, y: 0.2844347, z: 0.2844347}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1558404874}
@@ -23215,6 +23218,7 @@ MonoBehaviour:
   delayBetweenSentences: 6000
   instructionsPlane1: {fileID: 975565522}
   SoundClips: []
+  scriptOn: 0
 --- !u!4 &1195246780
 Transform:
   m_ObjectHideFlags: 0
@@ -27175,7 +27179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: boss battle here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27930,7 +27934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 935d7aa51a7e3664d8660a7ffae79d16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01a7f1231130af14c996e0187adbf4fe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34871,7 +34875,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

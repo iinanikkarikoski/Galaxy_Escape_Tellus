@@ -13,12 +13,12 @@ public class FireBullet1 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        /*if (Input.GetKeyDown(KeyCode.W))
         {
             Fire();
-        }
+        }*/
             
-        /*if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
+        if(TiltFive.Input.TryGetTrigger(out triggerDisplacement, TiltFive.ControllerIndex.Right, TiltFive.PlayerIndex.One)) {
             if(triggerDisplacement > 0.5f){
                 if(wasPressed == false){
                     Fire();
@@ -27,7 +27,7 @@ public class FireBullet1 : MonoBehaviour
             } else {
                 wasPressed = false;
             }
-        }*/
+        }
     }
 
     public void Fire() {

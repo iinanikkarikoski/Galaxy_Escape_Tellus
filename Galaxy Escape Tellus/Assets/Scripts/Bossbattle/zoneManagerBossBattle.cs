@@ -42,7 +42,7 @@ public class zoneManagerBossBattle : MonoBehaviour
         gun_yellow.SetActive(false);
         gun_green.SetActive(false);
         gun_blue.SetActive(false);
-        progressbar.SetActive(false);
+        progressbar.SetActive(true);
     }
 
 //tarkistaa että kaikki on laatoilla
@@ -72,7 +72,7 @@ public class zoneManagerBossBattle : MonoBehaviour
             gun_yellow.SetActive(true);
             gun_green.SetActive(true);
             gun_blue.SetActive(true);
-            progressbar.SetActive(true);            
+            //progressbar.SetActive(true);            
         }
         
     }
