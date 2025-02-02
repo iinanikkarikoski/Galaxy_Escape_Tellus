@@ -33,10 +33,15 @@ public class Collect : MonoBehaviour
             this.gameObject.SetActive(false);
 
             collected += 1;
-            string collectedString = "Collected: " + collected.ToString() + "/10 sensors";
-            myText1.text = collectedString;
-            myText2.text = collectedString;
-            myText3.text = collectedString;
+
+            if (collected < 10) {
+                // Flashes light to green
+                if (lightChanges != null /*&& hueLamp != null*/)
+                {
+                    lightChanges.StartCoroutine(lightChanges.FlashLight());
+                    //hueLamp.StartCoroutine(hueLamp.FlashLightHue());
+                }
+            }
 
             if (collected >= 10) {
                 barrier.SetActive(false);
@@ -49,15 +54,10 @@ public class Collect : MonoBehaviour
                 }
             }
 
-            if (collected < 3) {
-                // Flashes light to green
-                if (lightChanges != null /*&& hueLamp != null*/)
-                {
-                    lightChanges.StartCoroutine(lightChanges.FlashLight());
-                    //hueLamp.StartCoroutine(hueLamp.FlashLightHue());
-                }
-            }
-            
+            string collectedString = "Collected: " + collected.ToString() + "/10 sensors";
+            myText1.text = collectedString;
+            myText2.text = collectedString;
+            myText3.text = collectedString;
         }
     }
     public int getCollected(){

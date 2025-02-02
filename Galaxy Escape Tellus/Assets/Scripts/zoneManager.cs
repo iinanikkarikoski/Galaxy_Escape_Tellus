@@ -21,6 +21,7 @@ public class zoneManager : MonoBehaviour
 
     // Light flashing script
     public LightChanges lightChanges;
+    //public HueLamp hueLamp;
 
     
     void Start() 
@@ -47,9 +48,10 @@ public class zoneManager : MonoBehaviour
             spotLightGreen.enabled = true;
             spotLightBlue.enabled = true;
 
-            if (lightChanges != null)
+            if (lightChanges != null /*&& hueLamp != null*/)
             {
                 lightChanges.FinishedLight();
+                //hueLamp.FinishedLightHue();
             }
 
             if(audioPlayed == false) {

@@ -152,7 +152,7 @@ public class detectShapes : MonoBehaviour
     // Flashes light to green
     if (lightChanges != null)
     {
-        lightChanges.StartCoroutine(lightChanges.FlashLight());
+        lightChanges.FinishedLight();
     }
 
     return true; // All points are within the tolerance distance

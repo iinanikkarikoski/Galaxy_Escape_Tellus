@@ -33,8 +33,8 @@ public class BossHit : MonoBehaviour
 
             if (bossHealth > 0) {
                 if (lightChanges != null /*&& hueLamp != null*/) {
-                    lightChanges.StartCoroutine(lightChanges.FlashLight());
                     //hueLamp.StartCoroutine(hueLamp.FlashLightHue());
+                    lightChanges.StartCoroutine(lightChanges.FlashLight());
                 }
             }
             
@@ -44,8 +44,9 @@ public class BossHit : MonoBehaviour
                 lavaColl.SetActive(false);
 
                 if (lightChanges != null /*&& hueLamp != null*/) {
-                    lightChanges.FinishedLight();
                     //hueLamp.FinishedLightHue();
+                    lightChanges.FinishedLight();
+                    
                 }
             }
         }

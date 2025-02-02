@@ -29,6 +29,8 @@ public class ShowInstructions : MonoBehaviour
     private AudioSource audioSource;
     public bool scriptOn = false;
 
+    //public HueLamp hueLamp;
+
 /*
     void NextSentence()
     {
@@ -114,6 +116,7 @@ public class ShowInstructions : MonoBehaviour
         {
             hasActivated = true; // Ensure the plane shows only once
             scriptOn = true;
+            //hueLamp.NewArea();
             if (instructionsPlane1 != null)
             {
                 instructionsPlane1.SetActive(true); // Activate the instruction plane

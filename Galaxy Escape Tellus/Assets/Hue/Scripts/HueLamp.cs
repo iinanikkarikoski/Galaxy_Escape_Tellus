@@ -16,6 +16,7 @@ public class HueLamp : MonoBehaviour {
 
 	public Color greenColor = Color.green; 
     public Color redColor = Color.red; 
+	public Color cyanColor = Color.cyan;
     public float flashDuration = 0.7f;
 	
 	void Start() {
@@ -85,13 +86,6 @@ public class HueLamp : MonoBehaviour {
 		return new Vector3(hue, saturation, brightness);
 	}
 
-	/*void OnTriggerEnter(Collider collider) {
-		if (collider.tag == "player 1") {
-			Debug.Log("Collision detected, changing color.");
-			color = new Color(0.8584906f, 0.2632165f, 0.7936342f);
-		}
-	}*/
-
 	public System.Collections.IEnumerator FlashLightHue()
     {
         // Change the light to green
@@ -113,4 +107,9 @@ public class HueLamp : MonoBehaviour {
     {
         color = redColor;
     }
+
+	public void BossBattle()
+	{
+		color = cyanColor;
+	}
 }
